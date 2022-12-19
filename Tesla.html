@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla</title>
+    <link rel="stylesheet" href="tesla.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .body {
+        margin: 0px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        overflow: hidden;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        background: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/03e533bf-8b1d-463f-9813-9a597aafb280/bvlatuR/std/4096x2560/M3-Homepage-Desktop-LHD");
+
+       /* background-image: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/538ac149-d103-4834-9d38-641d8ae447ef/bvlatuR/std/4096x2560/Homepage-Model-S-Desktop-LHD"); */
+        /* background: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/03e533bf-8b1d-463f-9813-9a597aafb280/bvlatuR/std/4096x2560/M3-Homepage-Desktop-LHD"); */
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+      }
+      .navbar {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        flex-direction: row;
+        position : fixed;
+      }
+      .Name_t {
+        justify-content: left;
+        align-items: center;
+        height: 60px;
+        width: 100px;
+        padding-left: 30px;
+        padding-top: 5px;
+        opacity: 0.8;
+      }
+      .list {
+        font-size: 18px;
+        font-weight: lighter;
+        list-style: none;
+        text-decoration: none;
+        padding: 15px;
+        padding-top : 30px;
+        opacity: 1;
+      }
+      .navbar {
+        align-items: center;
+        /* position : fixed; */
+      }
+      #list1_item {
+        padding-left: 180px;
+      }
+      .listlast {
+        text-align: right;
+        text-decoration: none;
+        font-weight: lighter;
+        list-style: none;
+        padding: 15px;
+        padding-top : 30px;
+        font-size: 20px;
+        opacity: 1;
+      }
+      #firstlist {
+        padding-left: 120px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding-top : 100px;
+      }
+      .Modelname{
+        font-size : 50px;
+        font-weight: lighter;
+        padding-bottom : 5px;
+        margin-top : 0px;
+        margin-bottom: 2px; 
+
+      }
+      .descrip{
+        /* font-family: 'Ubuntu', sans-serif; */
+        font-size : 18px;
+        font-weight : lighter;
+        color : #393C41;
+        /* margin-bottom: 330px; */
+      }
+      .buttons{
+        padding-top : 330px;
+        display : flex;
+        /* flex-direction : row;
+        justify-content : center;
+        margin : auto; */
+        /* position : fixed; */
+        flex-direction : row;
+        justify-content : center;
+        margin : auto;
+        margin-left : 50px;
+
+      }
+      button[type = "CUSTOM ORDER"]{
+        height : 40px;
+        width : 250px;
+        color : white;
+        font-family: 'Ubuntu', sans-serif;
+        background-color: #393C41;
+        border-style: none;
+        border-radius : 5px;
+        margin-right : 5px;
+      }
+      button[type = "EXISTING INVENTORY"]{
+        height : 40px;
+        width : 250px;
+        font-family: 'Ubuntu', sans-serif;
+        color : #393C41;
+        border-radius : 5px;
+        border : none;
+        background-color: #F4F4F4A6;
+        margin-left : 5px;
+      }
+      .container1{
+        background: url("https://ph-files.imgix.net/69f4335e-ac5a-47c6-9250-0a59525a1ba7.jpeg?auto=format&fit=crop&frame=1&h=512&w=1024");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+
+
+      }
+    </style>
+
+    <!-- this is innerhtml write using javascript which will invoked whenever any event will take place which here is clicking on button -->
+    <script>
+      function myfunc(){
+      document.getElementById("existinginventory").innerHTML = "Try Now";}
+      </script>
+  </head>
+  <body>
+    <div class="mastercontainer">
+      <div class="navbar">
+        <img
+          class="Name_t"
+          ;
+          src="https://logowik.com/content/uploads/images/tesla.jpg"
+          ;
+          alt="Tesla"
+        />
+        <table class="Models">
+          <th class="list" ; id="list1_item">Model S</th>
+          <th class="list">Model X</th>
+          <th class="list">Model Y</th>
+          <th class="list">Model 3</th>
+          <th class="list">Solar Roof</th>
+          <th class="list">Solar panels</th>
+        </table>
+        <table>
+          <th class="listlast" ; id="firstlist">Shop</th>
+          <th class="listlast">Account</th>
+          <th class="listlast">Menu</th>
+        </table>
+      </div>
+
+      <div class="container">
+        <section class="content">
+          <h1 class="Modelname">Model 3</h1>
+          <p class = "descrip">
+            Order Online for <u>Touchless Delivery</u>
+          </p>
+        </section>
+      <div class = "buttons">
+        <button type = "CUSTOM ORDER" class = "One" id = "customorder" onclick = "myfunc_alert()">CUSTOM ORDER</button>
+        <button type = "EXISTING INVENTORY" class = "TWO" id = "existinginventory" onclick = "myfunc()">EXISTING INVENTORY</button>
+
+      </div>
+      <script>
+        function myfunc_alert(){
+          let d = new Date();
+        alert(d);
+
+      
+      }
+      </script>
+    </div>
+    <div class="container1">
+      <section class="content1">
+        <h1 class="modelname1">Model Y</h1>
+        <p class = "descrip1">
+          Order Online for <u>Touchless Delivery</u>
+        </p>
+      </section>
+      <div class = "buttons">
+        <button type = "CUSTOM ORDER" class = "One">CUSTOM ORDER</button>
+        <button type = "EXISTING INVENTORY" class = "TWO">EXISTING INVENTORY</button>
+
+      </div>
+
+  </div>
+  <div class="container2">
+    <section class="content2">
+      <h1 class="modelname2">Model S</h1>
+      <p class = "descrip2">
+        Order Online for <u>Touchless Delivery</u>
+      </p>
+    </section>
+    <div class = "buttons">
+      <button type = "CUSTOM ORDER"; class = "One">CUSTOM ORDER</button>
+      <button type = "EXISTING INVENTORY"; class = "TWO">EXISTING INVENTORY</button>
+
+    </div>
+
+</div>
+<div class="container3">
+  <section class="content3">
+    <h1 class="modelname3">Model X</h1>
+    <p class = "descrip3">
+      Order Online for <u>Touchless Delivery</u>
+    </p>
+  </section>
+  <div class = "buttons">
+    <button type = "CUSTOM ORDER"; class = "One">CUSTOM ORDER</button>
+    <button type = "EXISTING INVENTORY"; class = "TWO">EXISTING INVENTORY</button>
+
+  </div>
+
+</div></div>
+<div class="container4">
+  <section class="content4">
+    <h1 class="modelname4">Solar Panels</h1>
+    <p class = "descrip4">
+      Lowest Cost Solar Panels in America
+    </p>
+  </section>
+  <div class = "buttonssp">
+    <button type = "Order Now"; class = "One1">Order Now</button>
+    <button type = "Learn More"; class = "TWO1">Learn More</button>
+
+  </div>
+
+</div>
+<div class="container5">
+  <section class="content5">
+    <h1 class="modelname5">Solar Roof</h1>
+    <p class = "descrip5">
+      Produce Clean Energy From Your Roof.
+    </p>
+  </section>
+  <div class = "buttonssp">
+    <button type = "Order Now"; class = "One1">Order Now</button>
+    <button type = "Learn More"; class = "TWO1">Learn More</button>
+
+  </div>
+
+</div>
+<div class="container6">
+  <section class="content6">
+    <h1 class="modelname6">Accesories</h1>
+  </section>
+  <div class = "buttonssp">
+    <button type = "Shop Now"; class = "Oneshop">Shop Now</button>
+
+  </div>
+
+</div>
+
+
+</div>
+
+  </body>
+</html>
